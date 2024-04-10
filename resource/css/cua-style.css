@@ -1,0 +1,588 @@
+/*============================================
+        Template Name:Cuda-portfolio template
+        URL:
+        Description:An Awesome Portfolio Template
+        Author:Riaz Mahmud
+        Version:1.0
+==============================================*/
+
+/*============================================
+        CSS INDEX:
+        1.COMMON CSS
+        2.HEADER SECTION
+        3.SERVICE SECTION
+        4.TEAM SECTION
+        5.SKILL SECTION
+        6.PORTFOLIO
+        7.TESTIMONIAL
+        8.CONTACT
+        9.FOOTER
+==============================================*/
+
+/*============================================
+        1.COMMON CSS
+==============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background-color: #fff;
+    color: #000;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+a,
+a:hover {
+        text-decoration: none;
+        color: #fff;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+p{
+    font-weight: 300;
+    margin-top: 0;
+}
+h1,h2,h3,h4{
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 0;
+    font-weight: 700;
+}
+h1{
+    
+    font-size: 400%;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 400%;
+    letter-spacing: 2px;
+    color: #fff;
+}
+h3{
+    color: #fff;
+    font-size: 260%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+h4{
+    font-size: 240%;
+    text-transform: uppercase;
+    margin-top: 30px;
+} 
+h5{
+    font-weight: 400;
+    font-size: 180%;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+
+/*============================================
+        START REUSEABLE CPMPONENTS
+==============================================*/
+
+.row{
+    max-width: 1140px;
+    margin: auto;
+}
+section{
+        padding: 80px 100px;
+}
+.section-tittle{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-tittle p,
+.grid-service-items p{
+    font-weight: 400;
+    font-size: 160%;
+    color: #fff;
+    margin-top: 20px;
+}
+.section-heading::after{
+    content: "";
+    height: 3px;
+    width: 80px;
+    background: #000;
+    display: inline-block;
+}
+.btn:link,
+.btn:visited,
+.btn{
+        width: 204px;
+        background: #eb7d4b;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        font-size: 160%;
+        padding: 10px 0;
+        border: 2px solid #eb7d4b;
+        border-bottom: 5px solid #d36d3e;
+        border-radius: 3px;
+        transition: .5s;
+        cursor: pointer;
+        margin-top: 40px;
+        text-transform: uppercase;
+}
+.btn:hover,
+.btn:active{
+        background: transparent;
+        color: #eb7d4b;
+}
+
+/*============================================
+        2.HEADER SECTION
+==============================================*/
+
+#header{
+    height: 100vh;
+    background:linear-gradient(rgb(100, 58, 121,0.9),rgb(100, 58, 121,0.9)), url(img/bussiness\ office.jpg) no-repeat center / cover;
+    position: relative;
+}
+.logo{
+    float: left;
+    height: 40px;
+    margin-top: 40px;
+}
+.main-nav{
+    float: right;
+    font-weight: 700;
+    font-size: 160%;
+    margin-top: 50px;
+}
+nav.uk-sticky{
+    background: rgb(100, 58, 121,0.95);
+    z-index: 9999;
+}
+nav.uk-active .logo{
+    margin:18px 0;
+}
+nav.uk-active .main-nav{
+    margin: 24px 0;
+}
+.main-nav li{
+    display: inline-block;
+    margin: 0 8px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-transform: uppercase;
+    padding:2px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.main-nav li:first-child{
+    background: #643a79;
+    border-radius: 5px;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: #643a79;
+}
+.hero-text-box{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 50px;
+}
+/*====HAMBARGER LOGO====*/
+.nav-icon{
+    float: right;
+    color: #fff;
+    margin-top: 20px;
+}
+.nav-icon ion-icon{
+    font-size: 350%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+/*====HAMBARGER LOGO====*/
+.menu-container{
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0);
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.close-btn ion-icon{
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    color: #fff;
+    font-size: 500%;
+}
+.close-btn ion-icon:hover{
+    cursor: pointer;
+}
+.menu-item{
+    text-align: center;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+}
+.menu-item ul li{
+    margin: 5px 0;
+}
+.menu-item ul li:hover a{
+    font-size: 320%;
+    color: #ff2b4a;
+}     
+.menu-item ul li a{
+    font-size: 300%;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+/*============================================
+        3.SERVICE SECTION
+==============================================*/
+
+#service{
+    background:linear-gradient(rgba(23, 194, 164, 0.8),rgba(23, 194, 164, 0.8)), url(img/thierry.jpg) no-repeat center / cover;
+}
+#service .section-tittle{
+    width: 50%;
+    margin: 0 auto;
+}
+.grid-service-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 80px;
+    color: #fff;
+    text-align: center;
+}
+.grid-service-items{
+    padding: 65px 0;
+}
+#service .section-heading::after{
+    background: #14a58c;
+}
+.grid-service-items .service-icon{
+    height: 130px;
+}
+
+/*============================================
+        4.TEAM SECTION
+==============================================*/
+
+#team{
+    background:linear-gradient(rgb(231, 241, 248, 0.8),rgb(231, 241, 248, 0.8)), url(img/matthieu.jpg) no-repeat center / cover;
+}
+.grid-team-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 75px;
+    color: #fff;
+    text-align: center;
+}
+#team h2{
+    color:#3c4761;
+}
+#team h3{
+    font-size: 240%;
+    color: #27283d;
+    margin-bottom: 0;
+}
+#team .section-heading::after{
+    background: #99a6ae;
+}
+.team-img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+#team .post{
+    font-size: 160%;
+    color: #30bae7;
+    text-transform: capitalize;
+}
+#team p{
+    font-weight: 300;
+    font-size: 160%;
+    color:#3c4761;
+    margin-top: 20px;
+}
+.social-link{
+    margin-top:25px;
+}
+.social-link ul li{
+    display: inline-block;
+}
+.social-link ul li a{
+    display: block;
+    border-radius: 50%;
+    background-color: #bdd1df;
+    line-height: 32px;
+    margin: 0 3px;
+    width: 32px;
+    transition: .5s;
+}
+.social-link ul li a:hover{
+    background-color: #92aec2;
+    rotate: 360deg;
+}
+.social-link ul li a i{
+    font-size: 120%;
+}
+
+/*============================================
+        5.SKILL SECTION
+==============================================*/
+
+#skill-section{
+    background:linear-gradient(rgb(231, 241, 248, 0.8),rgb(231, 241, 248, 0.8)), url(img/marcell-oh.jpg) no-repeat center center / cover;
+}
+#skill-section h2,
+#skill-section h4,
+#skill-section p{
+    color: #3c4761;
+}
+.grid-skill-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 75px;
+    text-align: center;
+}
+#skill-section .section-heading::after{
+    background: #828d93;
+}
+
+/* Pie Chart */
+.pie-chart{
+    position: relative;
+}
+.pie-chart svg {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    vertical-align: middle;
+}
+.pie-chart:after {
+    content: attr(data-percent) "%";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    line-height: 174px;
+    font-size: 360%;
+    font-weight: 300;
+    text-align: center;
+ }
+
+/*============================================
+        6.PORTFOLIO
+==============================================*/
+
+#portfolio{
+    background: #ffdd99;
+    text-align: center;
+}
+#portfolio h2,
+#portfolio h4,
+#portfolio p{
+    color: #3c4761;
+}
+#portfolio .section-heading::after{
+    background: #828d93;
+}
+.grid-portfolio-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    text-align: center;
+}
+#portfolio .section-tittle{
+    margin-bottom: 30px;
+}
+.portfolio-filter{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-filter button{
+    background: #ebc985;
+    border: 1px solid #ebc985;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 25px;
+    margin: 0 5px;
+    font-size: 180%;
+    transition: .5s;
+}
+.portfolio-filter button:hover{
+    cursor: pointer;
+    background: #ff2b4a;
+    color: #000;
+}
+.portfolio-filter .mixitup-control-active{
+    background: #ff2b4a;
+    color: #000;
+}
+.portfolio-img{
+    width: 90%;
+}
+.load-more .btn:link,
+.load-more .btn:visited,
+.load-more .btn{
+    background: #17c2a4;
+    border: 2px solid #17c2a4;
+    border-bottom: 5px solid #14a187;
+}
+.load-more .btn:hover,
+.load-more .btn:active{
+    color: #17c2a4;
+    background: transparent;
+}
+
+/*============================================
+        7.TERSTIMONIAL
+==============================================*/
+
+#testimonial{
+    background:linear-gradient(rgb(215, 70, 128, 0.95),rgb(215, 70, 128, 0.95)), url(img/kari-unsplash.jpg) no-repeat center top / cover;
+    text-align: center;
+    color: #fff;
+}
+#testimonial .section-tittle{
+    margin-bottom: 30px;
+}
+#testimonial .section-tittle p{
+    font-size: 180%;
+    margin-top: 15px;
+}
+#testimonial .section-heading::after{
+    background: #a43662;
+}
+.grid-testimonial-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.grid-testimonial-items{
+    text-align: center;
+    padding: 30px 10px;
+    overflow: hidden;
+}
+.client-img{
+    float: left;
+    width: 35%;
+    overflow: hidden;
+}
+.client-img img{
+    border-radius: 50%;
+}
+.client-review{
+    text-align: start;
+    width: 65%;
+    float: left;
+}
+.client-review p{
+    font-style: italic;
+    font-size: 210%;
+}
+.client-review h4{
+    margin-top: 15px;
+}
+.client-review .role{
+    font-size: 180%;
+    color: #ffdd99;
+}
+/*============================================
+        8.CONTACT
+==============================================*/
+#contact{
+    background:linear-gradient(rgb(60, 84, 153, 0.95),rgb(60, 84, 153, 0.95)),url(img/susa-unsplash.jpg) no-repeat center center / cover;
+    text-align: center;
+}
+#contact .section-heading::after{
+    background: #223160;
+}
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea{
+    width: 100%;
+    border: 1px solid #273a71;
+    border-radius: 5px;
+    color: #fff;
+    background: #273a71;
+    font-size: 140%;
+    padding: 10px;
+    margin: 10px 0;
+}
+#contact form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+#contact form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact-btn .btn:link,
+.contact-btn .btn:visited,
+.contact-btn .btn{
+    background: #30bae7;
+    border: 2px solid #30bae7;
+    border-bottom: 5px solid #2795ba;
+}
+.contact-btn .btn:hover,
+.contact-btn .btn:active{
+    color: #30bae7;
+    background: transparent;
+}
+/*============================================
+        9.FOOTER
+==============================================*/
+#footer-section{
+    background: #344b8e;
+    padding: 25px 0;
+    border: 1px solid #4d6cca;
+    text-align: center;
+}
+#footer-section li{
+    display: inline-block;
+    margin: 0 8px;
+    font-weight: 600;
+    font-size: 240%;
+}
+#footer-section li a:link,
+#footer-section li a:visited{
+    padding:2px 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+#footer-section li:hover a:link,
+#footer-section li:hover a:visited{
+    color: #30bae7;
+}

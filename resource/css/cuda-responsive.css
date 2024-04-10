@@ -1,0 +1,229 @@
+@media screen and (min-width: 1400px) {
+    .row{
+        max-width: 1320px;
+    }
+    .nav-icon{
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1399px){
+    .row{
+        max-width: 1140px;
+    }
+    .nav-icon{
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    html,body{
+        font-size: 9px;
+    }
+    .row{
+        max-width: 960px;
+        margin: 0 15px;
+    }
+    .grid-team-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    .team-img{
+        width: 70%;
+    }
+    .grid-contact-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    #contact form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .grid-skill-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+    .nav-icon{
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .row{
+        max-width: 720px;
+        margin: 0;
+    }
+    .logo{
+        margin: 18px 0;
+        margin-left: 20px;
+    }
+    nav.uk-active .logo{
+        margin-left: 20px;
+    }
+    .main-nav{
+        display: none;
+    }
+    .grid-service-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 20px;
+    }
+    .grid-team-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 40px;
+    }
+    .grid-skill-container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+    .team-img{
+        width: 65%;
+    }
+    .grid-testimonial-container{
+        grid-gap: 25px 0px;
+    }
+    .grid-contact-container{
+        grid-template-columns: 1fr;
+        grid-gap: 0; 
+    }
+    .client-img{
+        width: 50%;
+        float: none;
+        margin: auto;
+    }
+    .client-review{
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    #contact form{
+        width: 100%;
+    }
+    #footer-section li{
+        margin: 0;
+        font-size: 230%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .row{
+        max-width: 540px;
+        margin: auto;
+    }
+    .logo{
+        margin-top: 20px;
+    }
+    .main-nav{
+        display: none;
+    }
+    .hero-text-box h1{
+        font-size: 290%;
+    }
+    #service .section-tittle{
+        width: 100%;
+    }
+    .section-heading h2{
+        display: block;
+        font-size: 250%;
+    }
+    .grid-service-container{
+        grid-template-columns: 1fr;
+        grid-gap: 0 40px;
+    }
+    .grid-service-items{
+        padding: 45px 0;
+    }
+    .grid-team-container{
+        grid-template-columns: 1fr;
+    }
+    .team-img{
+        width: 60%;
+    }
+    .grid-skill-container{
+        grid-template-columns: 1fr;
+        grid-gap: 60px 30px;
+    }
+    .grid-testimonial-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .grid-testimonial-container{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .client-img{
+        float: none;
+        margin: auto;
+    }
+    .client-review{
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .grid-portfolio-container{
+        grid-template-columns: 1fr;
+        grid-gap: 60px; 
+    }
+    .portfolio-filter button{
+        padding: 5px 20px;
+    }
+    .grid-contact-container {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+      }
+    #contact form{
+        width: 100%;
+      }
+    #footer-section li{
+        margin: 0;
+    }
+
+}
+@media screen and (max-width:575px) {
+    .row{
+        width: 100%;
+        margin: auto;
+    }
+    .main-nav{
+        display: none;
+    }
+    .logo{
+        margin: 18px 0;
+        margin-left: 20px;
+    }
+    .grid-service-container{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .grid-team-container{
+        grid-template-columns: 1fr;
+    }
+    .team-img{
+        width: 70%;
+    }
+    .grid-skill-container{
+        grid-template-columns: 1fr;
+    }
+    .grid-portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    .portfolio-filter button{
+        padding: 5px 20px;
+    }
+    .grid-testimonial-container{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .client-img{
+        float: none;
+        margin: auto;
+    }
+    .client-review{
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .grid-contact-container {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+    #contact form{
+        width: 100%;
+    }
+}
