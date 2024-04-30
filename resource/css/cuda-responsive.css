@@ -10,6 +10,9 @@
     .row{
         max-width: 1140px;
     }
+    .hero-text-box {
+        top: 25%;
+      }
     .nav-icon{
         display: none;
     }
@@ -50,6 +53,9 @@
         max-width: 720px;
         margin: 0;
     }
+    .hero-text-box {
+        top: 25%;
+      }
     .logo{
         margin: 18px 0;
         margin-left: 20px;
